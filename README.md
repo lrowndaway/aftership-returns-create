@@ -32,8 +32,6 @@ python3 create_return.py \
   --dry-run
 ```
 
-Remove `--dry-run` to POST to AfterShip. With **`--dry-run`**, only **Shopify** variables in `.env` are required (builds the AfterShip JSON without calling AfterShip). A real POST also needs **`AFTERSHIP_API_KEY`**.
-
 **By order id + line item id** (same as Decagon metadata / item selector):
 
 ```bash
@@ -61,6 +59,3 @@ python3 verify_return_by_rma.py RYXCS87M
 
 Writes **`last_verify_rma_<RMA>.json`** and prints HTTP status + `meta.message`.
 
-## Decagon alignment
-
-Your Wismo flow typically provides **`order_id`** and **`selected_item_id`** (Shopify line item id). Map those to **`--order-id`** and **`--line-item-id`** here.
